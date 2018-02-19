@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background: #222;
+  display: grid;
+  grid-gap: 3.5rem;
+}
+
+.footer a{
+  color: #fff;
+}
+
+.footer a:hover{
+  color: #039be5;
+}
+
+.header{
+  height: 40vh;
+}
+
+nav{
+  background: transparent!important;
+  box-shadow: none;
+}
+
+.heading{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.heading h2{
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer{
+  border-top: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer .copyright{
+  text-align: center;
+  margin: 0!important;
+}
+
+.footer .copyright p{
+  margin: 0;
+}
+
+.footer .social-media{
+  margin-top: 1rem;
+}
+
+.footer .social-media a{
+  padding-right: 1rem;
+}

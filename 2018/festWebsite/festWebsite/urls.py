@@ -22,6 +22,6 @@ from website import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^67milestone/', include('website.urls')),
+    url(r'^', include('website.urls')),
 
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+html,
+body {
+  background-color: black;
+  height: 100%;
+}
+.middle {
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#fff ;
+  font-family:'Montserrat', sans-serif;
+  font-size: 2vw;
+}
+#gallery2-k{
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  pointer-events: none;
+}
+
