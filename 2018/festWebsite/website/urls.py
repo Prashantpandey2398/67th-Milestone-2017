@@ -19,9 +19,11 @@ from django.contrib import admin
 from website import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^bmladmin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^campusambassdor',views.campusambassdor,name='campusambassdor'),
+    url(r'^campusambassador',views.campusambassador,name='campusambassador'),
     url(r'^success',views.success,name='success'),
+    url(r'^error',views.error,name='error'),
     url(r'^contact', views.contact, name='contact'),
+    url(r'^sponsor', views.sponsor, name='sponsor'),
 ]

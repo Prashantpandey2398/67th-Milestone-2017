@@ -1,341 +1,829 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load static %}
 <html>
 
 <head>
-  <!-- Site made with Mobirise Website Builder v4.6.5, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.6.5, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="{% static 'assets/images/icon-128x128.png' %}" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
-  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/gallery/style.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %}"></script>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
-  <link href="{% static 'flipclock.css' %}" rel="stylesheet">
+    <!-- Site made with Mobirise Website Builder v4.6.5, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.6.5, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/icon-128x128.png' %} " type="image/x-icon">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/gallery/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %} " type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %} "></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+    <link href="{% static 'flipclock.css' %} " rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+    <!-- Sanjeev -->
+    <!-- META -->
+    <meta name="description"
+          content="67th Milestone’18 is the second edition of annual techno-cultural-management fest of the university that will be held from *April 5, 2018 to April 7, 2018* at BML Munjal University Campus located in Gurgaon. It is a multi-faceted event which will be a host to broad spectrum of activities. Throughout the three days, it will offer a platform for artists to perform, techies to scratch their head, speed enthusiasts to get behind the wheel and fashion freaks to walk the ramp."/>
+    <meta name="keywords"
+          content="techfest, fest, bml fest, 67thmilestone, cultural fest, campus ambassador, sponsors, past sponsors, bmu, bmu fest"/>
+    <meta name="author" content="67th Milestone"/>
+
+    <!-- Facebook and Twitter integration-->
+    <meta property="og:title" content="67th Milestone'18 - The Journey Continues"/>
+    <meta property="og:image" content="{% static 'images/Logo 67th Milestone-Black.png' %} ' %}"/>
+    <meta property="og:url" content="http://www.67thmilestone.com"/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:description"
+          content="67th Milestone’18 is the second edition of annual techno-cultural-management fest of the university that will be held from *April 5, 2018 to April 7, 2018* at BML Munjal University Campus located in Gurgaon. It is a multi-faceted event which will be a host to broad spectrum of activities. Throughout the three days, it will offer a platform for artists to perform, techies to scratch their head, speed enthusiasts to get behind the wheel and fashion freaks to walk the ramp."/>
+    <!-- META ends -->
+    <!-- Ends -->
 </head>
+<style media="screen">
+
+.loader {
+  margin: 0 auto;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.loader > div {
+  height: 100%;
+  width: 8px;
+  display: inline-block;
+  float: left;
+  margin-left: 2px;
+  -webkit-animation: delay 0.8s infinite ease-in-out;
+  animation: delay 0.8s infinite ease-in-out;
+}
+.loader .bar1 {
+  background-color: #754fa0;
+}
+.loader .bar2 {
+  background-color: #09b7bf;
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+.loader .bar3 {
+  background-color: #90d36b;
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.loader .bar4 {
+  background-color: #f2d40d;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.loader .bar5 {
+  background-color: #fcb12b;
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.loader .bar6 {
+  background-color: #ed1b72;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+@-webkit-keyframes delay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes delay {
+  0%, 40%, 100% {
+    transform: scaleY(0.05);
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+#overlay{
+  height: 100%;
+  width:100%;
+  background: rgba(0, 0, 0,1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 15px;
+    top: 15px;
+    right: 35px;
+  }
+  .overlay .burger{
+    top:65%;
+    left:5%;
+  }
+}
+.burger{
+position: fixed;
+z-index: 1;
+top:2%;
+left:2%;
+
+}
+.social li{
+  display: inline-block;
+}
+.logo-both li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+</style>
 
 <body>
-  
-    <div class="middle">
-      <img src="{% static 'Logo 67th Milestone-White.svg' %}" height="300vh" width="300vw">
-        <h1>APRIL 5-7 </h1>
+
+
+<div id="overlay">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+    </div>
+</div>
+
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+  }
+
+  function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+  }
+
+</script>
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+    <div class="overlay-content">
+        <a href="\campusambassador">Campus Ambassador</a>
+        <a href="\sponsor">Past Sponsors</a>
+        <a href="\contact">Contact Us</a>
+
+        <ul class="social">
+            <li><a href="https://www.facebook.com/67milestone/?ref=br_rs" target="_blank"><i class="fab fa-facebook-f fa-1x"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/67thmilestone/?hl=en" target="_blank"><i class="fab fa-instagram fa-1x"></i></a></li>
+            <li><a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-1x"></i></a></li>
+            </ul>
+        <ul class="logo-both">
+            <li><a href="https://bml.edu.in" target="_blank"><img src="{% static 'images/BMU.svg' %}" height="120vh" width="120vw" alt="BML Munjal University Logo"></a></li>
+            <li><a href="/"><img src="{% static 'Logo 67th Milestone-White.svg' %}" height="120vh" width="120vw" alt="67th Milestone Logo"></a></li>
+        </ul>
+
+
+    </div>
+</div>
+<div class="burger" style="font-size:30px;color:#fff" onclick="openNav()"><i class="fas fa-bars"></i></div>
+
+
+<div class="middle">
+
+    <img src="{% static 'Logo 67th Milestone-White.svg' %}" height="300vh" width="300vw">
+    <h1>APRIL 5-7 </h1>
+
+    <div class="clock">
         <div class="time"></div>
         <div class="message"></div>
-          </div>
-  <script src="{% static 'scrip.js' %}"></script>
-  <section class="mbr-gallery mbr-slider-carousel cid-qJQJnfNfW3" id="gallery2-k">
+    </div>
+</div>
+<script src="{% static 'scrip.js' %} "></script>
+<section class="mbr-gallery mbr-slider-carousel cid-qJQJnfNfW3" id="gallery2-k">
 
     <div>
-      <div>
-        <!-- Filter -->
-        <!-- Gallery -->
-        <div class="mbr-gallery-row">
-          <div class="mbr-gallery-layout-default">
-            <div>
-              <div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="0" data-toggle="modal"><img src="{% static 'assets/images/img-4303-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
+        <div>
+            <!-- Filter -->
+            <!-- Gallery -->
+            <div class="mbr-gallery-row">
+                <div class="mbr-gallery-layout-default">
+                    <div>
+                        <div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="0" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4303-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="1" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4316-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="2" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4348-2000x1123-800x449.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="3" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4349-2000x1123-800x449.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="4" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4376-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="5" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4385-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="6" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4414-2000x1123-800x449.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="7" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4327-1728x2592-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="8" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4331-1728x2592-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="9" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4387-1728x2592-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="10" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4388-1728x2592-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="11" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4464-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Battle Of Bands">
+                                <div href="#lb-gallery2-k" data-slide-to="12" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4477-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="13" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4652-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="14" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4661-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="15" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4670-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="16" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4678-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="17" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4696-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Beat The Street">
+                                <div href="#lb-gallery2-k" data-slide-to="18" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4685-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="19" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5788-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="20" data-toggle="modal"><img
+                                        src="{% static 'assets/images/mg-9609-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="21" data-toggle="modal"><img
+                                        src="{% static 'assets/images/mg-9613-2000x1123-800x449.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="22" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-62-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="23" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-64-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="24" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-125-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="25" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5805-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="26" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5832-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Comic Toll Plaza">
+                                <div href="#lb-gallery2-k" data-slide-to="27" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5843-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="28" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4549-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="29" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4516-2000x1123-800x449.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="30" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4538-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="31" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4550-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="32" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4542-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
+                                <div href="#lb-gallery2-k" data-slide-to="33" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-4539-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="34" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-154-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="35" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5181-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="36" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5361-1000x1500-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="37" data-toggle="modal"><img
+                                        src="{% static 'assets/images/mg-9482-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="38" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5480-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="39" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-101-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="40" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-56-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="41" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-141-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="42" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-107-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="43" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5177-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="44" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-73-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Fashion Show">
+                                <div href="#lb-gallery2-k" data-slide-to="45" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-119-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Closing Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="46" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5559-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Closing Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="47" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-76-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Closing Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="48" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5534-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Closing Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="49" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5554-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Closing Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="50" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5664-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Grappling">
+                                <div href="#lb-gallery2-k" data-slide-to="51" data-toggle="modal"><img
+                                        src="{% static 'assets/images/img-5616-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Grappling">
+                                <div href="#lb-gallery2-k" data-slide-to="52" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-26-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Opening Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="53" data-toggle="modal"><img
+                                        src="{% static 'assets/images/csc-207-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Opening Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="54" data-toggle="modal"><img
+                                        src="{% static 'assets/images/csc-204-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Opening Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="55" data-toggle="modal"><img
+                                        src="{% static 'assets/images/csc-222-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Opening Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="56" data-toggle="modal"><img
+                                        src="{% static 'assets/images/csc-167-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Opening Ceremony">
+                                <div href="#lb-gallery2-k" data-slide-to="57" data-toggle="modal"><img
+                                        src="{% static 'assets/images/csc-197-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="58" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-127-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="59" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-244-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="60" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-252-2000x3000-800x1200.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="61" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-172-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="62" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-134-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                            <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false"
+                                 data-tags="Parikrama Band">
+                                <div href="#lb-gallery2-k" data-slide-to="63" data-toggle="modal"><img
+                                        src="{% static 'assets/images/dsc-178-2000x1333-800x533.jpg' %} " alt=""><span
+                                        class="icon-focus"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="1" data-toggle="modal"><img src="{% static 'assets/images/img-4316-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="2" data-toggle="modal"><img src="{% static 'assets/images/img-4348-2000x1123-800x449.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="3" data-toggle="modal"><img src="{% static 'assets/images/img-4349-2000x1123-800x449.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="4" data-toggle="modal"><img src="{% static 'assets/images/img-4376-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="5" data-toggle="modal"><img src="{% static 'assets/images/img-4385-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="6" data-toggle="modal"><img src="{% static 'assets/images/img-4414-2000x1123-800x449.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="7" data-toggle="modal"><img src="{% static 'assets/images/img-4327-1728x2592-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="8" data-toggle="modal"><img src="{% static 'assets/images/img-4331-1728x2592-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="9" data-toggle="modal"><img src="{% static 'assets/images/img-4387-1728x2592-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="10" data-toggle="modal"><img src="{% static 'assets/images/img-4388-1728x2592-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="11" data-toggle="modal"><img src="{% static 'assets/images/img-4464-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Battle Of Bands">
-                  <div href="#lb-gallery2-k" data-slide-to="12" data-toggle="modal"><img src="{% static 'assets/images/img-4477-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="13" data-toggle="modal"><img src="{% static 'assets/images/img-4652-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="14" data-toggle="modal"><img src="{% static 'assets/images/img-4661-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="15" data-toggle="modal"><img src="{% static 'assets/images/img-4670-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="16" data-toggle="modal"><img src="{% static 'assets/images/img-4678-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="17" data-toggle="modal"><img src="{% static 'assets/images/img-4696-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beat The Street">
-                  <div href="#lb-gallery2-k" data-slide-to="18" data-toggle="modal"><img src="{% static 'assets/images/img-4685-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="19" data-toggle="modal"><img src="{% static 'assets/images/img-5788-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="20" data-toggle="modal"><img src="{% static 'assets/images/mg-9609-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="21" data-toggle="modal"><img src="{% static 'assets/images/mg-9613-2000x1123-800x449.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="22" data-toggle="modal"><img src="{% static 'assets/images/dsc-62-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="23" data-toggle="modal"><img src="{% static 'assets/images/dsc-64-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="24" data-toggle="modal"><img src="{% static 'assets/images/dsc-125-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="25" data-toggle="modal"><img src="{% static 'assets/images/img-5805-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="26" data-toggle="modal"><img src="{% static 'assets/images/img-5832-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Comic Toll Plaza">
-                  <div href="#lb-gallery2-k" data-slide-to="27" data-toggle="modal"><img src="{% static 'assets/images/img-5843-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="28" data-toggle="modal"><img src="{% static 'assets/images/img-4549-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="29" data-toggle="modal"><img src="{% static 'assets/images/img-4516-2000x1123-800x449.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="30" data-toggle="modal"><img src="{% static 'assets/images/img-4538-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="31" data-toggle="modal"><img src="{% static 'assets/images/img-4550-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="32" data-toggle="modal"><img src="{% static 'assets/images/img-4542-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="EDM">
-                  <div href="#lb-gallery2-k" data-slide-to="33" data-toggle="modal"><img src="{% static 'assets/images/img-4539-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="34" data-toggle="modal"><img src="{% static 'assets/images/dsc-154-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="35" data-toggle="modal"><img src="{% static 'assets/images/img-5181-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="36" data-toggle="modal"><img src="{% static 'assets/images/img-5361-1000x1500-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="37" data-toggle="modal"><img src="{% static 'assets/images/mg-9482-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="38" data-toggle="modal"><img src="{% static 'assets/images/img-5480-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="39" data-toggle="modal"><img src="{% static 'assets/images/dsc-101-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="40" data-toggle="modal"><img src="{% static 'assets/images/dsc-56-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="41" data-toggle="modal"><img src="{% static 'assets/images/dsc-141-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="42" data-toggle="modal"><img src="{% static 'assets/images/dsc-107-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="43" data-toggle="modal"><img src="{% static 'assets/images/img-5177-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="44" data-toggle="modal"><img src="{% static 'assets/images/dsc-73-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Fashion Show">
-                  <div href="#lb-gallery2-k" data-slide-to="45" data-toggle="modal"><img src="{% static 'assets/images/dsc-119-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Closing Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="46" data-toggle="modal"><img src="{% static 'assets/images/img-5559-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Closing Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="47" data-toggle="modal"><img src="{% static 'assets/images/dsc-76-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Closing Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="48" data-toggle="modal"><img src="{% static 'assets/images/img-5534-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Closing Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="49" data-toggle="modal"><img src="{% static 'assets/images/img-5554-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Closing Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="50" data-toggle="modal"><img src="{% static 'assets/images/img-5664-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Grappling">
-                  <div href="#lb-gallery2-k" data-slide-to="51" data-toggle="modal"><img src="{% static 'assets/images/img-5616-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Grappling">
-                  <div href="#lb-gallery2-k" data-slide-to="52" data-toggle="modal"><img src="{% static 'assets/images/dsc-26-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Opening Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="53" data-toggle="modal"><img src="{% static 'assets/images/csc-207-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Opening Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="54" data-toggle="modal"><img src="{% static 'assets/images/csc-204-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Opening Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="55" data-toggle="modal"><img src="{% static 'assets/images/csc-222-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Opening Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="56" data-toggle="modal"><img src="{% static 'assets/images/csc-167-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Opening Ceremony">
-                  <div href="#lb-gallery2-k" data-slide-to="57" data-toggle="modal"><img src="{% static 'assets/images/csc-197-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="58" data-toggle="modal"><img src="{% static 'assets/images/dsc-127-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="59" data-toggle="modal"><img src="{% static 'assets/images/dsc-244-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="60" data-toggle="modal"><img src="{% static 'assets/images/dsc-252-2000x3000-800x1200.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="61" data-toggle="modal"><img src="{% static 'assets/images/dsc-172-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="62" data-toggle="modal"><img src="{% static 'assets/images/dsc-134-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Parikrama Band">
-                  <div href="#lb-gallery2-k" data-slide-to="63" data-toggle="modal"><img src="{% static 'assets/images/dsc-178-2000x1333-800x533.jpg' %}" alt=""><span class="icon-focus"></span></div>
-                </div>
-              </div>
             </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-        <!-- Lightbox -->
-        <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery2-k">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="carousel-inner">
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4303-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4316-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4348-2000x1123.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4349-2000x1123.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4376-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4385-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4414-2000x1123.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4327-1728x2592.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4331-1728x2592.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4387-1728x2592.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4388-1728x2592.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4464-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4477-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4652-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4661-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4670-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4678-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4696-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4685-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5788-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/-mg-9609-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/-mg-9613-2000x1123.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-62-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-64-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-125-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5805-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5832-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5843-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4549-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4516-2000x1123.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4538-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4550-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4542-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-4539-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-154-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5181-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5361-1000x1500.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/-mg-9482-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5480-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-101-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-56-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-141-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-107-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5177-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-73-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-119-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5559-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-76-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5534-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5554-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5664-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/img-5616-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-26-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/csc-207-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/csc-204-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/csc-222-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/csc-167-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/csc-197-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-127-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-244-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-252-2000x3000.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-172-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item"><img src="{% static 'assets/images/dsc-134-2000x1333.jpg' %}" alt=""></div>
-                  <div class="carousel-item active"><img src="{% static 'assets/images/dsc-178-2000x1333.jpg' %}" alt=""></div>
-                </div><a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery2-k"><span class="mbri-left mbr-iconfont" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control carousel-control-next"
-                  role="button" data-slide="next" href="#lb-gallery2-k"><span class="mbri-right mbr-iconfont" aria-hidden="true"></span><span class="sr-only">Next</span></a><a class="close" href="#" role="button" data-dismiss="modal"><span class="sr-only">Close</span></a></div>
+            <!-- Lightbox -->
+            <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1"
+                 data-keyboard="true" data-interval="false" id="lb-gallery2-k">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="carousel-inner">
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4303-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4316-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4348-2000x1123.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4349-2000x1123.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4376-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4385-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4414-2000x1123.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4327-1728x2592.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4331-1728x2592.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4387-1728x2592.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4388-1728x2592.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4464-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4477-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4652-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4661-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4670-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4678-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4696-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4685-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5788-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/-mg-9609-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/-mg-9613-2000x1123.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-62-2000x1333.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-64-2000x1333.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-125-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5805-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5832-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5843-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4549-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4516-2000x1123.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4538-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4550-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4542-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-4539-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-154-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5181-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5361-1000x1500.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/-mg-9482-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5480-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-101-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-56-2000x3000.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-141-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-107-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5177-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-73-2000x1333.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-119-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5559-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-76-2000x1333.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5534-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5554-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5664-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/img-5616-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img src="{% static 'assets/images/dsc-26-2000x1333.jpg' %} "
+                                                                alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/csc-207-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/csc-204-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/csc-222-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/csc-167-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/csc-197-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-127-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-244-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-252-2000x3000.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-172-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item"><img
+                                        src="{% static 'assets/images/dsc-134-2000x1333.jpg' %} " alt=""></div>
+                                <div class="carousel-item active"><img
+                                        src="{% static 'assets/images/dsc-178-2000x1333.jpg' %} " alt=""></div>
+                            </div>
+                            <a class="carousel-control carousel-control-prev" role="button" data-slide="prev"
+                               href="#lb-gallery2-k"><span class="mbri-left mbr-iconfont"
+                                                           aria-hidden="true"></span><span
+                                    class="sr-only">Previous</span></a><a class="carousel-control carousel-control-next"
+                                                                          role="button" data-slide="next"
+                                                                          href="#lb-gallery2-k"><span
+                                class="mbri-right mbr-iconfont" aria-hidden="true"></span><span
+                                class="sr-only">Next</span></a><a class="close" href="#" role="button"
+                                                                  data-dismiss="modal"><span
+                                class="sr-only">Close</span></a></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
-  </section>
-  <script src="{% static 'assets/popper/popper.min.js' %}"></script>
-  <script src="{% static 'assets/tether/tether.min.js' %}"></script>
-  <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
-  <script src="{% static 'assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js' %}"></script>
-  <script src="{% static 'assets/vimeoplayer/jquery.mb.vimeo_player.js' %}"></script>
-  <script src="{% static 'assets/masonry/masonry.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/theme/js/script.js' %}"></script>
-  <script src="{% static 'assets/gallery/player.min.js' %}"></script>
-  <script src="{% static 'assets/gallery/script.js' %}"></script>
-  <script src="{% static 'assets/slidervideo/script.js' %}' %}"></script>
-  <script src="{% static 'js/script.js' %}"></script>
-  <script src="{% static 'flipclock.js' %}"></script>
+</section>
+
+
+<script src="{% static 'assets/popper/popper.min.js' %} "></script>
+<script src="{% static 'assets/tether/tether.min.js' %} "></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+<script src="{% static 'assets/smoothscroll/smooth-scroll.js' %} "></script>
+<script src="{% static 'assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js' %} "></script>
+<script src="{% static 'assets/vimeoplayer/jquery.mb.vimeo_player.js' %} "></script>
+<script src="{% static 'assets/masonry/masonry.pkgd.min.js' %} "></script>
+<script src="{% static 'assets/imagesloaded/imagesloaded.pkgd.min.js' %} "></script>
+<script src="{% static 'assets/theme/js/script.js' %} "></script>
+<script src="{% static 'assets/gallery/player.min.js' %} "></script>
+<script src="{% static 'assets/gallery/script.js' %} "></script>
+<script src="{% static 'assets/slidervideo/script.js' %} "></script>
+<script src="{% static 'js/script.js' %} "></script>
+<script src="{% static 'js/preloader.js' %} "></script>
+<script src="{% static 'flipclock.js' %} "></script>
+
 
 </body>
 
 </html>
+

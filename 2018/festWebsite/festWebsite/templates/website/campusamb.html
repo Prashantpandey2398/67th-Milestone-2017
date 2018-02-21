@@ -1,5 +1,6 @@
 {% extends 'website/base.html' %}
 {% load staticfiles %}
+{% block title %}Campus Ambassador Program{% endblock %}
 {% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/campusamb.css' %}" >{% endblock %}
 {% block image %}{% static  'images/campusamb.jpg' %}{% endblock %}
 {% block heading %}Campus Ambassador Program{% endblock %}
@@ -45,39 +46,29 @@
    <div class="modal-content">
       <h4>Registration</h4>
 
-      <form id="category_form" method="post" action="\67milestone/campusambassdor">
-{% csrf_token %}
-    {% for hidden in form.hidden_fields %}
-    {{ hidden }}
-    {% endfor %}
-    {% for field in form.visible_fields %}
-    {{ field.errors }}
-    {{ field.help_text }}
-    {{ field }}
-    <br>
-    {% endfor %}
 
-      <!--<form id="category_form" class="col s12" method="post" action="\67milestone/success">-->
-      <!--{% csrf_token %}-->
-          <!--{% for hidden in form.hidden_fields %}-->
-              <!--{{ hidden }}-->
-              <!--{% endfor %}-->
-          <!--{% for field in form.visible_fields %}-->
-              <!--{{ field.errors }}-->
-              <!--{{ field.help_text }}-->
-              <!--{{ field }}-->
-              <!--<br>-->
-              <!--{% endfor %}-->
-
-    <!--</form>-->
-        <button type="submit" name="submit" value="SUBMIT">
-          <a href="\67milestone">
-
-          </a>SUBMIT</button>
-       <!--<a href="\67milestone" class="modal-action modal-close waves-effect waves-blue btn-flat ">Submit</a>-->
-
+      <form id="category_form" class="col s12" method="post" action="\campusambassador">
+      {% csrf_token %}
+          {% for hidden in form.hidden_fields %}
+              {{ hidden }}
+              {% endfor %}
+          {% for field in form.visible_fields %}
+              {{ field.errors }}
+              {{ field.help_text }}
+              {{ field }}
+              <br>
+              {% endfor %}
+          <br>
+    <button class="btn waves-effect light-blue darken-1" type="submit" name="submit" value="SUBMIT">
+SUBMIT
+        </button>
     </form>
+
+          <!--<a href="\67milestone" class="modal-action modal-close waves-effect waves-blue btn-flat ">Submit</a>-->
+
      </div>
    </div>
    <!-- Modal ends -->
 {% endblock %}
+
+
