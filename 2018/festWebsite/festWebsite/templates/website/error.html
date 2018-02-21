@@ -1,0 +1,16 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Oops!{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/error.css' %}" >{% endblock %}
+{% block image %}{% static  'images/error.jpg' %}{% endblock %}
+{% block heading %}Oops!{% endblock %}
+{% block content %}
+<div class="row">
+	<h3>What in the world are you trying to do? Error!</h3>
+	<h3>Possible reasons:</h3>
+	<ul>
+		<li>User already exists!</li>
+		<li><a href="\contact">Contact us</a> </li>
+	</ul>
+</div>
+{% endblock %}
