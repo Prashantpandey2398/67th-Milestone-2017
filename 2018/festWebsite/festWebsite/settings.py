@@ -25,7 +25,7 @@ SECRET_KEY = '12!hq_-1ivucrim@+emw2_q+udvh+bhpbhwe!vd&^m9+k5lw)d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'festWebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bmldb',
+        'USER':'u_bml',
+        'PASSWORD':'Nishit@30',
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
 
@@ -132,3 +136,4 @@ STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+STATIC_DIR = os.path.join(BASE_DIR,'staticfiles')
