@@ -57,7 +57,7 @@ def campusambassador(request):
             if 'email' in form.errors:
                 context_dict['error'] = 'User with this Email already exits'
                 print(context_dict)
-            if 'phone' in form.errors:
+            elif 'phone' in form.errors:
                 context_dict['error'] = 'User with this Whatsapp Number already exits'
                 print(context_dict)
             return render(request, 'website/error.html', context_dict)
