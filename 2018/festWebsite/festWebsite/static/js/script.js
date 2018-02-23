@@ -1,12 +1,11 @@
+setInterval(function(){
 
-$("#gallery2-k").prop("disabled", true);
+    //time to scroll to bottom
+    $("html, body").animate({ scrollTop: $(document).height() }, 30000);
 
+    //scroll to top
+    setTimeout(function() {
+       $('html, body').animate({scrollTop:0}, 9000);
+    },2000);//call every 2000 miliseconds
 
-function scroll(speed) {
-    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, speed, function() {
-        $(this).animate({ scrollTop: 0 }, speed);
-    });
-}
-speed = ($(window).width())/400*50000;
-scroll(speed)
-setInterval(function(){scroll(speed)}, speed * 1);
+},2000)

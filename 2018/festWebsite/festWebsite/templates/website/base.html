@@ -33,6 +33,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
+ <div id="overlay">
+    <div id="loader-container"></div>
+ </div>
   <section class="header" style="background: url({% block image %}{% endblock %}); background-size: cover; background-position: bottom; background-attachment: fixed;">
     <div class="container">
       <nav id="navbar">
@@ -82,9 +85,10 @@
       <p>&copy; 67th Milestone 2018</p>
     </div>
     <div class="col s12 m3 social-media">
-      <a href="https://fb.com/BMLMunjalUniversity" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://twitter.com/BMLUniv" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://instagram.com/bmlmunjaluniversity" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://fb.com/67milestone" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+        <a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://instagram.com/67thmilestone" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.youtube.com/watch?v=CJ1RXABb4Fw" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
     </div>
   </div>
   </section>
@@ -93,6 +97,10 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script>
+  var overlay = document.getElementById("overlay");
+  window.addEventListener('load',function(){
+    overlay.style.display = "none";
+  })
   $( document ).ready(function(){
     $(".button-collapse").sideNav();
     $('.modal').modal();

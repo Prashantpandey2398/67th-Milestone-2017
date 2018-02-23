@@ -6,10 +6,10 @@
 {% block heading %}Oops!{% endblock %}
 {% block content %}
 <div class="row">
-	<h3>What in the world are you trying to do? Error!</h3>
-	<h3>Possible reasons:</h3>
+	<h6>What in the world are you trying to do? Error!</h6>
+	<h6>Possible reasons:</h6>
 	<ul>
-		<li>User already exists!</li>
+		<li>{{ error }}</li>
 		<li><a href="\contact">Contact us</a> </li>
 	</ul>
 </div>
